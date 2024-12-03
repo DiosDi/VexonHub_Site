@@ -1,98 +1,86 @@
-/* Genel Stil */
+/* Genel Ayarlar */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #ffffff;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
 }
 
-/* Başlık ve Navigasyon */
+/* Header */
 header {
-    background-color: #1e1e1e;
-    padding: 20px;
     text-align: center;
+    background-color: #1e1e1e;
+    padding: 20px 0;
 }
 
 header h1 {
-    font-size: 28px;
     margin: 0;
+    font-size: 28px;
+    color: #a78bfa;
+    text-transform: uppercase;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 20px 0 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    margin: 15px 0 0;
+    gap: 10px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
-    background-color: #3a3a3a;
+    background-color: #292929;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #5a5a5a;
+    background-color: #4f4f4f;
 }
 
-/* Bölüm Başlıkları */
-section h2 {
-    color: #ffa500;
+/* Bölümler */
+section {
+    padding: 20px;
     text-align: center;
-    margin: 30px 0 10px;
 }
 
-/* Script Listesi */
-.script-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+section h2 {
+    font-size: 24px;
+    color: #a78bfa;
+    margin-bottom: 15px;
 }
 
-.script-item {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Discord Butonu */
-#discord-btn {
-    background-color: #5865F2;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+section p {
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    color: #e0e0e0;
 }
 
-#discord-btn:hover {
-    background-color: #4752c4;
-}
-
-/* Geliştirici Bölümü */
-.developer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-}
-
-.developer {
-    background-color: #222;
+/* Script Kartları */
+.script-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
     padding: 15px;
-    border-radius: 8px;
+    margin: 15px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.script-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #a78bfa;
+}
+
+.script-card p {
+    font-size: 14px;
+    color: #cfcfcf;
 }
