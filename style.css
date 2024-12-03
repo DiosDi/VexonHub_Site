@@ -3,80 +3,97 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
 header {
     background: #333;
-    color: #fff;
     padding: 1rem 0;
     text-align: center;
+    border-bottom: 2px solid #444;
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
+    color: #fff;
+    letter-spacing: 2px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #d3d3d3;
     text-decoration: none;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    background: #444;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    background: #575757;
+    background: #555;
+    color: #fff;
 }
 
 section {
     padding: 2rem;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
     text-align: center;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #b29cff;
+    margin-bottom: 1rem;
 }
 
 .script-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .script-item {
-    background: #f4f4f4;
+    background: #2a2a2a;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.script-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: #fff;
 }
 
 #discord-btn {
     background: #7289da;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #discord-btn:hover {
-    background: #677bc4;
+    background: #5b6eae;
 }
 
 /* Mobil için Stil */
@@ -87,17 +104,21 @@ section {
 
     nav ul {
         flex-direction: column;
+        gap: 8px;
     }
 
     nav ul li a {
-        display: block;
-        padding: 10px;
+        padding: 8px;
         text-align: center;
     }
 
+    .script-item h3 {
+        font-size: 1.2rem;
+    }
+
     #discord-btn {
-        padding: 12px 25px;
         font-size: 1rem;
+        padding: 10px 16px;
     }
 }
 
@@ -107,16 +128,16 @@ section {
     }
 
     nav ul {
-        gap: 10px;
+        gap: 5px;
     }
 
     nav ul li a {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: 6px 12px;
     }
 
     #discord-btn {
         font-size: 0.9rem;
-        padding: 10px 20px;
+        padding: 8px 12px;
     }
 }
