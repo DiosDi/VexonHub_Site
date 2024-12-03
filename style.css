@@ -1,21 +1,26 @@
-/* Genel Stil */
+/* Genel Stil (Dark Mode) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #121212; /* Karanlık arka plan */
+    color: #e0e0e0; /* Açık metin rengi */
 }
 
 header {
-    background: #333;
+    background: #1e1e1e; /* Daha koyu bir başlık arka planı */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Hafif gölge */
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.8rem; /* Daha küçük başlık boyutu */
+    font-size: 2rem;
+    letter-spacing: 1px; /* Daha modern bir his */
+    text-transform: uppercase; /* Büyük harfler */
 }
 
 nav ul {
@@ -28,22 +33,19 @@ nav ul {
     margin: 10px 0;
 }
 
-nav ul li {
-    margin: 0;
-}
-
 nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
-    font-size: 0.9rem; /* Yazı boyutu küçültüldü */
+    font-size: 1rem;
     padding: 10px 15px;
-    background: #444;
+    background: #333;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background: #555;
+    background: #6200ea; /* Vurgu rengi (mor) */
+    color: #fff;
 }
 
 section {
@@ -51,6 +53,20 @@ section {
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
+    background: #1e1e1e; /* Bölüm arka planı */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #bb86fc; /* Başlık için vurgu rengi */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+section p, ul {
+    color: #e0e0e0;
 }
 
 .script-list {
@@ -61,14 +77,20 @@ section {
 }
 
 .script-item {
-    background: #f4f4f4;
+    background: #2c2c2c;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.script-item:hover {
+    transform: translateY(-5px); /* Hafif yukarı kalkma efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 #discord-btn {
-    background: #7289da;
+    background: #6200ea;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -76,16 +98,17 @@ section {
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.3s;
+    margin-top: 10px;
 }
 
 #discord-btn:hover {
-    background: #677bc4;
+    background: #3700b3;
 }
 
 /* Mobil için Stil */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem; /* Daha küçük başlık mobilde */
+        font-size: 1.5rem; /* Mobilde başlık daha küçük */
     }
 
     nav ul {
@@ -93,7 +116,7 @@ section {
     }
 
     nav ul li a {
-        font-size: 0.8rem; /* Mobilde yazılar daha küçük */
+        font-size: 0.9rem;
         padding: 8px 10px;
     }
 
