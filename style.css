@@ -1,126 +1,269 @@
-/* Genel Stil (Dark Mode) */
-body {
-    font-family: 'Arial', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(120deg, #f0f8ff, #d0e1f9); 
+    color: #333;
     line-height: 1.6;
-    background-color: #121212; /* Karanlık arka plan */
-    color: #e0e0e0; /* Açık metin rengi */
+    scroll-behavior: smooth;
+    padding-bottom: 30px; 
 }
 
 header {
-    background: #1e1e1e; /* Daha koyu bir başlık arka planı */
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2rem;
-    letter-spacing: 1px; /* Daha modern bir his */
-    text-transform: uppercase; /* Büyük harfler */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 10px 0;
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #e0e0e0;
+    color: white;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 15px;
-    background: #333;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: #6200ea; /* Vurgu rengi (mor) */
-    color: #fff;
+    color: #00bfff;
+    transform: scale(1.1);
 }
 
-section {
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 800px;
+#home {
     text-align: center;
-    background: #1e1e1e; /* Bölüm arka planı */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    padding: 80px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#home h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    font-weight: 600;
+    color: #007bff;
+    text-shadow: 2px 2px 10px rgba(0, 123, 255, 0.3);
 }
 
-section h2 {
-    color: #bb86fc; /* Başlık için vurgu rengi */
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+#home p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
-section p, ul {
-    color: #e0e0e0;
+#scripts {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#scripts h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
 .script-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .script-item {
-    background: #2c2c2c;
-    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.script-item h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 123, 255, 0.4);
+}
+
+.script-item p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
 .script-item:hover {
-    transform: translateY(-5px); /* Hafif yukarı kalkma efekti */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.more h4 {
+    font-size: 1.6rem;
+    color: #007bff;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 4px rgba(0, 123, 255, 0.3);
+}
+
+.more h4:hover {
+    color: #0056b3;
+}
+
+#keyless {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+#keyless h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-shadow: 1px 1px 4px rgba(0, 123, 255, 0.3);
+}
+
+#keyless p {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+#use {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#use p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#use button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#use button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 255, 0.6);
 }
 
 #discord-btn {
-    background: #6200ea;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #discord-btn:hover {
-    background: #3700b3;
+    transform: scale(1.2); 
+    box-shadow: 0 0 20px 5px #00bfff, 0 0 10px #0000ff; 
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.5); 
 }
 
-/* Mobil için Stil */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem; /* Mobilde başlık daha küçük */
-    }
+#updates {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
 
-    nav ul {
-        gap: 10px;
-    }
+#updates h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 1px 1px 5px rgba(0, 123, 255, 0.3);
+}
 
-    nav ul li a {
-        font-size: 0.9rem;
-        padding: 8px 10px;
-    }
+#updates ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
 
-    .script-list {
-        grid-template-columns: 1fr;
-    }
+#updates li {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+#developers {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.developer-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.developer {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.developer h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.developer p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
