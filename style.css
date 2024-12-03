@@ -1,32 +1,32 @@
-/* Genel Ayarlar */
+/* Genel Stil */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
-/* Header */
 header {
+    background: #333;
+    padding: 1rem 0;
     text-align: center;
-    background-color: #1e1e1e;
-    padding: 20px 0;
+    border-bottom: 2px solid #444;
 }
 
 header h1 {
     margin: 0;
-    font-size: 28px;
-    color: #a78bfa;
-    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 2px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 1rem 0 0;
     display: flex;
     justify-content: center;
-    margin: 15px 0 0;
     gap: 10px;
 }
 
@@ -35,52 +35,109 @@ nav ul li {
 }
 
 nav ul li a {
+    color: #d3d3d3;
     text-decoration: none;
-    color: #ffffff;
-    background-color: #292929;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    background: #444;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    background-color: #4f4f4f;
+    background: #555;
+    color: #fff;
 }
 
-/* Bölümler */
 section {
-    padding: 20px;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
     text-align: center;
 }
 
 section h2 {
-    font-size: 24px;
-    color: #a78bfa;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #b29cff;
+    margin-bottom: 1rem;
 }
 
-section p {
-    font-size: 16px;
-    color: #e0e0e0;
+.script-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-/* Script Kartları */
-.script-card {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px auto;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.script-item {
+    background: #2a2a2a;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.script-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #a78bfa;
+.script-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: #fff;
 }
 
-.script-card p {
-    font-size: 14px;
-    color: #cfcfcf;
+#discord-btn {
+    background: #7289da;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#discord-btn:hover {
+    background: #5b6eae;
+}
+
+/* Mobil için Stil */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .script-item h3 {
+        font-size: 1.2rem;
+    }
+
+    #discord-btn {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #discord-btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
 }
