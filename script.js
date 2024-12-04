@@ -6,3 +6,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+
+
+function copyToClipboard(elementId) {
+    const textToCopy = document.getElementById(elementId).textContent;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert("Kod kopyalandı!");
+    }).catch(() => {
+        alert("Kod kopyalanamadı. Lütfen tekrar deneyin.");
+    });
+}
