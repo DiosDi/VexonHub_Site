@@ -1,4 +1,4 @@
-/* Genel Ayarlar */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +14,7 @@ body {
     padding-bottom: 30px;
 }
 
-/* Başlık Ayarları */
+
 header {
     background-color: #1e1e1e;
     color: white;
@@ -59,13 +59,13 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Ana Bölüm */
+
 section {
     text-align: center;
     padding: 60px 20px;
 }
 
-/* Balon Tasarımı */
+
 .bubble {
     background-color: #1e1e1e;
     border: 1px solid #333;
@@ -94,7 +94,7 @@ section {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Discord Butonu */
+
 #discord-btn {
     background-color: #007bff;
     color: white;
@@ -113,7 +113,7 @@ section {
     text-shadow: 2px 2px 8px rgba(0, 0, 255, 0.6);
 }
 
-/* Liste Tasarımı */
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -125,7 +125,7 @@ ul li {
     margin: 10px 0;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -136,4 +136,21 @@ footer {
 
 footer p {
     font-size: 1rem;
+}
+
+
+.copy-btn {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+.copy-btn:hover {
+    background-color: #0080ff;
+    transform: scale(1.1);
 }
