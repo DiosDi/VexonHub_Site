@@ -7,53 +7,57 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 <body>
+    <!-- Background animation -->
+    <div id="background"></div>
 
-    <section id="home">
-        <div class="bubble">
-            <h3>Key System</h3>
-            <p>Get your key from our Discord to unlock scripts.</p>
-        </div>
-    </section>
+    <div class="content">
+        <section id="home">
+            <div class="bubble">
+                <h3>Key System</h3>
+                <p>Get your key from our Discord to unlock scripts.</p>
+            </div>
+        </section>
 
-    <section id="scripts">
-        <h2>Available Scripts</h2>
-        <div class="bubble">
-            <h3>Key</h3>
-            <pre id="script1">VexonHub_Skibidi_Key</pre>
-            <button class="copy-btn" data-clipboard-target="#script1">Copy</button>
-        </div>
-    </section>
+        <section id="scripts">
+            <h2>Available Scripts</h2>
+            <div class="bubble">
+                <h3>VexonHub Keyed</h3>
+                <pre id="script1">loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/main/TSB-VexonHub"))()</pre>
+                <button class="copy-btn" data-clipboard-target="#script1">Copy</button>
+            </div>
+        </section>
 
-    <section id="keyless">
-        <h2>Keyless Script</h2>
-        <div class="bubble">
-            <h3>What is Keyless?</h3>
-            <p>No key needed! Just run the script instantly without verification.</p>
-        </div>
-    </section>
+        <section id="keyless">
+            <h2>Keyless Script</h2>
+            <div class="bubble">
+                <h3>What is Keyless?</h3>
+                <p>No key needed! Just run the script instantly without verification.</p>
+            </div>
+        </section>
 
-    <section id="use">
-        <h2>Use Script</h2>
-        <div class="bubble">
-            <h3>How to Use?</h3>
-            <p>Get started by joining our Discord and access all the Roblox scripts you need!</p>
-            <a href="https://discord.gg/DSnfyfPz9R" target="_blank">
-                <button id="discord-btn">Join Discord</button>
-            </a>
-        </div>
-    </section>
+        <section id="use">
+            <h2>Use Script</h2>
+            <div class="bubble">
+                <h3>How to Use?</h3>
+                <p>Get started by joining our Discord and access all the Roblox scripts you need!</p>
+                <a href="https://discord.gg/DSnfyfPz9R" target="_blank">
+                    <button id="discord-btn">Join Discord</button>
+                </a>
+            </div>
+        </section>
 
-    <section id="features">
-        <h2>Script Features</h2>
-        <div class="bubble">
-            <h3>Extra Features</h3>
-            <p>Enjoy seamless gameplay and enhance your Roblox experience with our scripts!</p>
-        </div>
-    </section>
+        <section id="features">
+            <h2>Script Features</h2>
+            <div class="bubble">
+                <h3>Extra Features</h3>
+                <p>Enjoy seamless gameplay and enhance your Roblox experience with our scripts!</p>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 VexonHub - All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 VexonHub - All rights reserved.</p>
+        </footer>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <script>
@@ -61,12 +65,25 @@
         clipboard.on('success', function(e) {
             var button = e.trigger;
             button.textContent = "Success!";
-            button.style.backgroundColor = "green";
+            button.style.backgroundColor = "purple";
             setTimeout(function() {
                 button.textContent = "Copy";
                 button.style.backgroundColor = "";
             }, 2000);
         });
+    </script>
+
+    <!-- Background animation script -->
+    <script>
+        const background = document.getElementById("background");
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement("div");
+            star.className = "star";
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            background.appendChild(star);
+        }
     </script>
 </body>
 </html>
