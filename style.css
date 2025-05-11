@@ -24,7 +24,7 @@ h2, h3 {
 }
 
 button {
-    background-color: #00ffe1;
+    background-color: #6000ff;
     color: #000;
     border: none;
     padding: 10px 15px;
@@ -35,7 +35,7 @@ button {
 }
 
 button:hover {
-    background-color: #00d4b8;
+    background-color: #6000ff;
 }
 
 footer {
@@ -50,5 +50,5 @@ pre {
     padding: 10px;
     border-radius: 8px;
     overflow-x: auto;
-    color: #00ff91;
+    color: #6000ff;
 }
