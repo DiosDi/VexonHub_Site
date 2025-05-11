@@ -7,50 +7,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 <body>
-    <!-- Background animation -->
     <div id="background"></div>
 
-    <div class="content">
-        <section id="home">
-            <div class="bubble">
-                <h3>Key System</h3>
-                <p>Get your key from here and use VexonHub</p>
-            </div>
-        </section>
+    <div class="container">
+        <div class="box">
+            <h2>VexonHub Key System</h2>
+            <p>Get your key from here and use VexonHub</p>
+        </div>
 
-        <section id="scripts">
-            <h2>Available Scripts</h2>
-            <div class="bubble">
-                <h3>VexonHub Key</h3>
-                <pre id="script1">VexonHub_Skibidi_Key</pre>
-                <button class="copy-btn" data-clipboard-target="#script1">Copy</button>
-            </div>
-        </section>
-
+        <div class="box">
+            <h3>Key:</h3>
+            <pre id="script1">VexonHub_Skibidi_Key</pre>
+            <button class="copy-btn" data-clipboard-target="#script1">Copy</button>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <script>
         var clipboard = new ClipboardJS('.copy-btn');
         clipboard.on('success', function(e) {
             var button = e.trigger;
-            button.textContent = "Success!";
+            button.textContent = "Copied!";
             button.style.backgroundColor = "purple";
             setTimeout(function() {
                 button.textContent = "Copy";
                 button.style.backgroundColor = "";
-            }, 2000);
+            }, 1500);
         });
     </script>
 
-    <!-- Background animation script -->
     <script>
         const background = document.getElementById("background");
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 80; i++) {
             const star = document.createElement("div");
             star.className = "star";
             star.style.top = `${Math.random() * 100}%`;
             star.style.left = `${Math.random() * 100}%`;
-            star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            star.style.animationDuration = `${Math.random() * 4 + 4}s`;
             background.appendChild(star);
         }
     </script>
