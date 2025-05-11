@@ -2,10 +2,9 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0d001a;
-    color: #fff;
-    overflow-x: hidden;
-    position: relative;
+    background-color: #0d001a;
+    color: white;
+    overflow: hidden;
 }
 
 #background {
@@ -15,7 +14,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    overflow: hidden;
 }
 
 .star {
@@ -24,74 +22,64 @@ body {
     height: 2px;
     background: #a100ff;
     border-radius: 50%;
-    animation: float 10s linear infinite;
-    opacity: 0.8;
+    animation: float 8s linear infinite;
+    opacity: 0.7;
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(-100vh) scale(0.5);
-        opacity: 0;
-    }
+    0% { transform: translateY(0); opacity: 0.7; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
 
-.content {
-    position: relative;
-    z-index: 1;
-    padding-bottom: 100px;
+.container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #1b0033;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #a100ff;
 }
 
-section {
-    padding: 40px;
-    border-bottom: 1px solid #2d004d;
+.box {
+    margin-bottom: 25px;
 }
 
 h2, h3 {
     color: #c770ff;
+    margin-bottom: 10px;
 }
 
-.bubble {
-    background-color: #2a0047;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #a100ff;
-    margin-top: 20px;
+pre {
+    background-color: #310051;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+    color: #d9aaff;
 }
 
 button {
     background-color: #a100ff;
-    color: #fff;
+    color: white;
     border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
-    border-radius: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    margin-top: 8px;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #8600d1;
+    background-color: #8500d1;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a0033;
-    color: #aaa;
-}
+@media (max-width: 500px) {
+    .container {
+        margin: 40px 20px;
+        padding: 15px;
+    }
 
-pre {
-    background-color: #38005e;
-    padding: 10px;
-    border-radius: 8px;
-    overflow-x: auto;
-    color: #c770ff;
+    pre {
+        font-size: 13px;
+    }
 }
