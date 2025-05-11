@@ -1,54 +1,97 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0e0e0e;
-    color: white;
     margin: 0;
     padding: 0;
+    background: #0d001a;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #a100ff;
+    border-radius: 50%;
+    animation: float 10s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
 }
 
 section {
     padding: 40px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #2d004d;
 }
 
 h2, h3 {
-    color: #00ffe1;
+    color: #c770ff;
 }
 
 .bubble {
-    background-color: #6000ff;
+    background-color: #2a0047;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 10px #00ffe1;
+    box-shadow: 0 0 15px #a100ff;
     margin-top: 20px;
 }
 
 button {
-    background-color: #6000ff;
-    color: #000;
+    background-color: #a100ff;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     margin-top: 10px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #6000ff;
+    background-color: #8600d1;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #111;
-    color: #777;
+    background-color: #1a0033;
+    color: #aaa;
 }
 
 pre {
-    background-color: #2a2a2a;
+    background-color: #38005e;
     padding: 10px;
     border-radius: 8px;
     overflow-x: auto;
-    color: #6000ff;
+    color: #c770ff;
 }
