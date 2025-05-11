@@ -17,7 +17,7 @@
 
         <div class="box">
             <h3>Key:</h3>
-            <pre id="script1">VexonHub_Skibidi_Key</pre>
+            <pre id="script1">Loading key...</pre>
             <button class="copy-btn" data-clipboard-target="#script1">Copy</button>
         </div>
     </div>
@@ -49,3 +49,18 @@
     </script>
 </body>
 </html>
+
+
+
+<script>
+    // Key'i çek ve göster
+    fetch("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/Key")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("script1").textContent = data.trim();
+        })
+        .catch(error => {
+            document.getElementById("script1").textContent = "Error loading key!";
+            console.error("Key fetch failed:", error);
+        });
+</script>
