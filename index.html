@@ -1,134 +1,167 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <title>VexonHub</title>
 
-    <title>VexonHub - Script Page</title>
-
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="style.css">
+    
+    
+    <style>
+    
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d001a;
+    color: white;
+    overflow: hidden;
+}
 
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #a100ff;
+    border-radius: 50%;
+    animation: float 8s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #1b0033;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #a100ff;
+}
+
+.box {
+    margin-bottom: 25px;
+}
+
+h2,h3 {
+    color: #c770ff;
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: #310051;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+    color: #d9aaff;
+}
+
+button {
+    background-color: #a100ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #8500d1;
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin: 40px 20px;
+        padding: 15px;
+    }
+
+    pre {
+        font-size: 13px;
+    }
+}
+    
+    </style>
+    
+    
+    
+    
 </head>
 
 <body>
-
     <div id="background"></div>
 
-
-
     <div class="container">
-
         <div class="box">
-
             <h2>VexonHub Key System</h2>
-
-            <p>Get your key from here and use VexonHub Key Changes Evary 12 Hour</p>
-
+            <p>Thanks For Using VexonHub.. Key is here:</p>
         </div>
-
-
 
         <div class="box">
-
             <h3>Key:</h3>
-
             <pre id="script1">Loading key...</pre>
-
             <button class="copy-btn" data-clipboard-target="#script1">Copy</button>
-
         </div>
-
     </div>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 
     <script>
-
         var clipboard = new ClipboardJS('.copy-btn');
 
-        clipboard.on('success', function(e) {
-
+        clipboard.on('success', function (e) {
             var button = e.trigger;
-
             button.textContent = "Copied!";
-
             button.style.backgroundColor = "purple";
 
-            setTimeout(function() {
-
+            setTimeout(function () {
                 button.textContent = "Copy";
-
                 button.style.backgroundColor = "";
-
             }, 1500);
-
         });
-
-    </script>
-
-
-
-    <script>
+    
 
         const background = document.getElementById("background");
 
         for (let i = 0; i < 80; i++) {
-
             const star = document.createElement("div");
-
             star.className = "star";
-
             star.style.top = `${Math.random() * 100}%`;
-
             star.style.left = `${Math.random() * 100}%`;
-
             star.style.animationDuration = `${Math.random() * 4 + 4}s`;
-
             background.appendChild(star);
-
         }
+    
 
+        fetch("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/Key-VexonHub")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("script1").textContent = data.trim();
+            })
+            .catch(error => {
+                document.getElementById("script1").textContent = "Error loading key!";
+            });
     </script>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
-<script>
-
-    // Key'i çek ve göster
-
-    fetch("https://raw.githubusercontent.com/TheVex0n/vexonhub-key/refs/heads/main/key.txt")
-
-        .then(response => response.text())
-
-        .then(data => {
-
-            document.getElementById("script1").textContent = data.trim();
-
-        })
-
-        .catch(error => {
-
-            document.getElementById("script1").textContent = "Error loading key!";
-
-            console.error("Key fetch failed:", error);
-
-        });
-
-</script>
-
-
-
